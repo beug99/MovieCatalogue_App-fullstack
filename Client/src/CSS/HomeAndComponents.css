@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Merriweather&family=Lora:ital@1&display=swap');
+/* Simple browser reset */
+* {
+  box-sizing: border-box;
+}
+
+
+nav ul li a,
+.navbar-email,
+.navbar-logout {
+  font-size: 1.1rem;
+}
+
+.searchbar-input,
+.searchbar-select,
+.searchbar-button {
+    font-size: 1.0rem;
+}
+
+
+
+/* Header */
+header {
+  width: 100%;
+  background: #ff4136;
+  color: white;
+  font-weight: bold;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Left logo (MovieFinder+) */
+#icon {
+  width: 50%;
+  display: inline-block;
+  text-align: left;
+}
+
+#icon a {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.0rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Right nav */
+nav {
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 3px;
+  transition: 0.3s ease all;
+}
+
+nav ul li a:hover {
+  background: white;
+}
+
+#icon a:hover {
+    background: none;
+    color: white;
+  }
+
+
+/* For user email shown after login */
+.navbar-email {
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+/* Logout button style */
+.navbar-logout {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-logout:hover {
+  background-color: white;
+  color: #f22c1e;
+}
+
+
+.brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 28px;
+  color: white;
+}
+
+
+footer {
+  background-image: url("/img/Footer.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: 200px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #000;
+  font-weight: bold; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.hero_title{
+  font-size: 100px;
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+
+}
+
+.hero_subtitle {
+  font-size: 40px;
+  font-style: italic;
+
+}
+
+.hero_content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.hero_content a{
+
+  display: inline-block;
+  color: #ffffff;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  padding: 15px 30px;
+  margin: 0px 10px;
+  text-decoration: none;
+  font-size: 28px;
+  transition: transform 1s;
+}
+
+
+.hero_text {
+  margin-top: 4rem;
+  color: #000000;
+  z-index: 2;
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+}
+
+
+.hero_content a:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+
+.hero_layout {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/img/HomepageBG.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* SearchBar styles */
+.searchbar-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchbar-input {
+  flex: 2;
+  min-width: 200px;
+  padding: 0.5rem;
+}
+
+.searchbar-select {
+  padding: 0.5rem;
+}
+
+.searchbar-button {
+  padding: 0.5rem 1rem;
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

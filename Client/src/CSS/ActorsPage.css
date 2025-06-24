@@ -1,0 +1,106 @@
+.actor-page {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.back-button {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lifespan {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.roles-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.roles-table thead {
+  background-color: #ff4136;
+  color: white;
+}
+
+.roles-table th,
+.roles-table td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+.roles-table td a {
+  color: #0074D9;
+  text-decoration: none;
+}
+
+.pagination-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chart-container {
+  margin-top: 3rem;
+  height: 300px;
+}
+
+/* src/CSS/ActorPage.css */
+.actor-login-banner {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.banner-text {
+  font-size: 1.8rem;
+  color: #FF4136;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #FF4136;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  background: #fff5f5;
+}
+
+.imdb-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+
+
+.loading,
+.error {
+  padding: 2rem;
+  text-align: center;
+}
