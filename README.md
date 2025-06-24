@@ -4,6 +4,7 @@ MovieFinder+ is a full-stack, modern movie discovery and cataloguing platform. I
 Built with React (Client), Node.js/Express (Server), MySQL, JWT, AG Grid, Chart.js, and more.
 
 🗂 Directory Structure
+
 bash
 Copy
 Edit
@@ -15,6 +16,8 @@ MovieFinderPlus/
 
 
 🚀 Features
+
+
 Modern, Responsive UI using React, Bootstrap, and AG Grid
 
 Powerful Search & Filtering (by title, year, sortable columns)
@@ -32,12 +35,16 @@ Production-Ready Deployment (runs on Azure VM, HTTPS with PM2)
 Accessibility: Semantic HTML, alt tags, and keyboard navigation support
 
 🛠️ Technology Stack
+
 Layer	Tech Used
 Frontend	React, AG Grid, Chart.js, Bootstrap, Reactstrap, React Router
 Backend	Node.js, Express.js, MySQL, Knex.js, JWT, bcrypt, dotenv
 DevOps	PM2, Azure, HTTPS (self-signed), Swagger/OpenAPI
 
+
+
 ✨ Key Screens & Functionality
+
 Registration/Login: Secure account creation, token-based authentication, instant feedback.
 
 Movie Catalogue: Fast, paginated table view (AG Grid) with search/filter, sorting, and easy navigation.
@@ -51,6 +58,8 @@ State Persistence: Navigation restores filters, search, and current page in the 
 Logout: Securely destroys session both client and server side.
 
 🧑‍💻 Getting Started
+
+
 1. Clone the Repository
 bash
 Copy
@@ -109,6 +118,8 @@ npm start
 
 
 🔗 API Endpoints (Server)
+
+
 Authentication:
 
 POST /user/register — Register new user
@@ -132,6 +143,9 @@ Docs:
 GET /docs/openapi.json — OpenAPI 3.0 spec for Swagger/Postman
 
 🖥️ Application Design
+
+
+
 Navigation: Persistent navbar, clear links to Home, Movies, Register, Login/Logout, and user session indicator.
 
 Movie Table: AG Grid with quick search, filter, sortable columns, and paginated views.
@@ -144,6 +158,9 @@ Accessibility: Descriptive alt text, semantic HTML, high-contrast UI.
 
 
 📸 Screenshots
+
+
+
 
 ![image](https://github.com/user-attachments/assets/8cd5bd26-ccc1-4a59-80b6-33756c9553d9)
 
