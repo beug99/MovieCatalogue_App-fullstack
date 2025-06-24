@@ -1,67 +1,147 @@
-🎬 MovieFinder+ (Client)
+🎬 MovieFinder+
 
-A responsive, React-based movie discovery platform allowing users to search, browse, and explore a vast database of movies with dynamic filtering, rating visualizations, and cast exploration. This is the client-side application of the full-stack project.
+MovieFinder+ is a full-stack, modern movie discovery and cataloguing platform. It allows users to search, browse, and visualize a large database of movies and actors with secure authentication, seamless state preservation, and an attractive, responsive UI.
+Built with React (Client), Node.js/Express (Server), MySQL, JWT, AG Grid, Chart.js, and more.
+
+🗂 Directory Structure
+bash
+Copy
+Edit
+MovieFinderPlus/
+│
+├── Client/        # React frontend (MovieFinder+ user interface)
+├── Server/        # Node.js backend (API, auth, DB access)
+└── README.md      # You are here!
+
 
 🚀 Features
-🔍 Search & Filter: Search movies by title or filter by release year using interactive UI.
+Modern, Responsive UI using React, Bootstrap, and AG Grid
 
-📊 Dynamic Visuals: Visualize actor IMDb ratings via Chart.js bar charts.
+Powerful Search & Filtering (by title, year, sortable columns)
 
-📄 State Preservation: Uses sessionStorage to maintain search filters and page state when navigating between views.
+Movie & Actor Detail Pages with visual data and IMDb rating charts (Chart.js)
 
-🔐 Authentication: Secure JWT-based login with automatic token refresh and route protection.
+JWT Authentication with access/refresh tokens (secure, persistent sessions)
 
-📚 Cast & Crew Navigation: View detailed actor pages with filmographies and interactive charts.
+State Preservation — Filters, search, and pagination are restored after navigation
 
-📱 Responsive Design: Mobile-friendly, component-scoped styling with a cinema-themed layout.
+OpenAPI 3.0 / Swagger documentation (backend)
 
-🧩 Tech Stack
-Frontend: React, React Router, Bootstrap 5, ReactStrap
+Production-Ready Deployment (runs on Azure VM, HTTPS with PM2)
 
-Charts: Chart.js
+Accessibility: Semantic HTML, alt tags, and keyboard navigation support
 
-Tables: AG Grid
+🛠️ Technology Stack
+Layer	Tech Used
+Frontend	React, AG Grid, Chart.js, Bootstrap, Reactstrap, React Router
+Backend	Node.js, Express.js, MySQL, Knex.js, JWT, bcrypt, dotenv
+DevOps	PM2, Azure, HTTPS (self-signed), Swagger/OpenAPI
 
-Auth & State: JWT, sessionStorage, React Context
+✨ Key Screens & Functionality
+Registration/Login: Secure account creation, token-based authentication, instant feedback.
 
-Styling: Custom CSS, Bootstrap
+Movie Catalogue: Fast, paginated table view (AG Grid) with search/filter, sorting, and easy navigation.
 
-📂 Project Structure
-css
-Copy code
-Client/
-├── public/
-│   └── img/ (static assets)
-├── src/
-│   ├── components/ (Nav, Footer, Header, SearchBar)
-│   ├── pages/ (Home, Login, Register, MovieCatalogue, Movie, Actor)
-│   ├── services/ (AuthService.js)
-│   ├── CSS/ (page-specific stylesheets)
-│   └── App.jsx
-└── vite.config.js
-🔐 Authentication Flow
-/user/register: Register a new user.
+Movie Detail Page: See posters, year, genres, runtime, ratings, box office, cast/crew, and more.
 
-/user/login: Login and retrieve JWT + refresh token.
+Actor/Person Page: View all movies for a given actor, including an interactive IMDb rating bar chart.
 
-/user/refresh: Automatically called on token expiry.
+State Persistence: Navigation restores filters, search, and current page in the catalogue.
 
-/user/logout: Ends session and clears tokens.
+Logout: Securely destroys session both client and server side.
 
-🔁 REST API Endpoints Used
-GET /movies/search – Paginated movie search by title & year.
+🧑‍💻 Getting Started
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/MovieFinderPlus.git
+cd MovieFinderPlus
+2. Environment Setup
+Client and Server each have their own node_modules.
 
-GET /movies/data/:imdbID – Fetch movie details & crew.
+Add a .env file in Server/ (see sample below).
 
-GET /people/:id – Get actor’s full filmography.
+Server .env Example
+ini
+Copy
+Edit
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=yourpassword
+DB_NAME=moviedb
+JWT_SECRET=your_jwt_secret
+PORT=3001
+3. Install Dependencies
+bash
+Copy
+Edit
+cd Client
+npm install
+cd ../Server
+npm install
+4. Database Setup
+Set up a MySQL database (moviedb by default).
 
-POST /user/register – Create a new account.
+Run migrations and seed data if provided (knex migrate:latest & knex seed:run).
 
-POST /user/login – Authenticate a user.
+5. Running the Apps
+Server:
 
-POST /user/refresh – Refresh access token.
+bash
+Copy
+Edit
+cd Server
+node app.js
+or for production:
 
-POST /user/logout – Invalidate refresh token.
+bash
+Copy
+Edit
+pm2 start app.js
+Client:
+
+bash
+Copy
+Edit
+cd Client
+npm start
+
+
+🔗 API Endpoints (Server)
+Authentication:
+
+POST /user/register — Register new user
+
+POST /user/login — Login, returns JWT + refresh token
+
+POST /user/refresh — Refresh access token
+
+POST /user/logout — Logout and invalidate session
+
+Movies & Actors:
+
+GET /movies/search — Search/filter movies (with pagination)
+
+GET /movies/data/:imdbID — Movie detail, including cast/crew
+
+GET /people/:id — Actor/person detail and full filmography
+
+Docs:
+
+GET /docs/openapi.json — OpenAPI 3.0 spec for Swagger/Postman
+
+🖥️ Application Design
+Navigation: Persistent navbar, clear links to Home, Movies, Register, Login/Logout, and user session indicator.
+
+Movie Table: AG Grid with quick search, filter, sortable columns, and paginated views.
+
+Charts: Bar charts of IMDb ratings on actor pages (Chart.js).
+
+Session Handling: Client-side state saved with sessionStorage for non-disruptive UX.
+
+Accessibility: Descriptive alt text, semantic HTML, high-contrast UI.
+
 
 📸 Screenshots
 
